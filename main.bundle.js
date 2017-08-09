@@ -447,7 +447,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ProductService = (function () {
     function ProductService(_http) {
         this._http = _http;
-        this._productUrl = './api/products/products.json';
+        this._productUrl = 'products.json';
     }
     ProductService.prototype.getProducts = function () {
         return this._http.get(this._productUrl)
