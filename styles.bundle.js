@@ -97,7 +97,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nli {\n    font-size: large;\n}\n\ndiv.panel-heading {\n   font-size: x-large;\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\nli {\r\n    font-size: large;\r\n}\r\n\r\ndiv.panel-heading {\r\n   font-size: x-large;\r\n}", ""]);
 
 // exports
 

@@ -49,7 +49,7 @@ AppComponent = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_welcome_component__ = __webpack_require__("../../../../../src/app/home/welcome.component.ts");
@@ -81,7 +81,7 @@ AppModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forRoot([
                 { path: 'welcome', component: __WEBPACK_IMPORTED_MODULE_5__home_welcome_component__["a" /* WelcomeComponent */] },
                 { path: '', redirectTo: 'welcome', pathMatch: 'full' },
@@ -100,7 +100,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/home/welcome.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\n    <div class=\"panel-heading\">\n        {{pageTitle}}\n    </div>\n    <div class=\"panel-body\"  >\n        <div class=\"row\" >\n            <img src=\"./assets/images/logo.jpg\" \n                 class=\"img-responsive center-block\"\n                 style=\"max-height:300px;padding-bottom:50px\"/>\n        </div>\n        <div class=\"row\"  >\n            <div class=\"text-center\">Developed by:</div>\n            <h3 class=\"text-center\">Deborah Kurata</h3>\n\n            <div class=\"text-center\">@deborahkurata</div>\n            <div class=\"text-center\">\n                <a href=\"http://www.bit.ly/DeborahKsBlog\">www.bit.ly/DeborahKsBlog</a>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"panel panel-primary\">\r\n    <div class=\"panel-heading\">\r\n        {{pageTitle}}\r\n    </div>\r\n    <div class=\"panel-body\"  >\r\n        <div class=\"row\" >\r\n            <img src=\"./assets/images/logo.jpg\" \r\n                 class=\"img-responsive center-block\"\r\n                 style=\"max-height:300px;padding-bottom:50px\"/>\r\n        </div>\r\n        <div class=\"row\"  >\r\n            <div class=\"text-center\">Developed by:</div>\r\n            <h3 class=\"text-center\">Deborah Kurata</h3>\r\n\r\n            <div class=\"text-center\">@deborahkurata</div>\r\n            <div class=\"text-center\">\r\n                <a href=\"http://www.bit.ly/DeborahKsBlog\">www.bit.ly/DeborahKsBlog</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -154,7 +154,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/products/product-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='panel panel-primary' *ngIf='product'>\n    <div class='panel-heading'>\n        {{pageTitle + ': ' + product.productName}}\n    </div>\n\n    <div class='panel-body'>\n        <div class='row'>\n            <div class='col-md-6'>\n                <div class='row'>\n                    <div class='col-md-3'>Name:</div>\n                    <div class='col-md-6'>{{product.productName}}</div>\n                </div>\n                <div class='row'>\n                    <div class='col-md-3'>Code:</div>\n                    <div class='col-md-6'>{{product.productCode | lowercase | convertToSpaces: '-'}}</div>\n                </div>\n                <div class='row'>\n                    <div class='col-md-3'>Description:</div>\n                    <div class='col-md-6'>{{product.description}}</div>\n                </div>\n                <div class='row'>\n                    <div class='col-md-3'>Availability:</div>\n                    <div class='col-md-6'>{{product.releaseDate}}</div>\n                </div>\n                <div class='row'>\n                    <div class='col-md-3'>Price:</div>\n                    <div class='col-md-6'>{{product.price|currency:'USD':true}}</div>\n                </div>\n                <div class='row'>\n                    <div class='col-md-3'>5 Star Rating:</div>\n                    <div class='col-md-6'>\n                        <pm-star [rating]='product.starRating'>\n                        </pm-star>\n                    </div>\n                </div>\n            </div>\n\n            <div class='col-md-6'>\n                <img class='center-block img-responsive' \n                     [style.width.px]='200' \n                     [style.margin.px]='2' \n                     [src]='product.imageUrl'\n                     [title]='product.productName'>\n            </div>\n        </div>\n    </div>\n\n    <div class='panel-footer'>\n        <a class='btn btn-default' (click)='onBack()' style='width:80px'>\n            <i class='glyphicon glyphicon-chevron-left'></i> Back\n        </a>\n    </div>\n</div>"
+module.exports = "<div class='panel panel-primary' *ngIf='product'>\r\n    <div class='panel-heading'>\r\n        {{pageTitle + ': ' + product.productName}}\r\n    </div>\r\n\r\n    <div class='panel-body'>\r\n        <div class='row'>\r\n            <div class='col-md-6'>\r\n                <div class='row'>\r\n                    <div class='col-md-3'>Name:</div>\r\n                    <div class='col-md-6'>{{product.productName}}</div>\r\n                </div>\r\n                <div class='row'>\r\n                    <div class='col-md-3'>Code:</div>\r\n                    <div class='col-md-6'>{{product.productCode | lowercase | convertToSpaces: '-'}}</div>\r\n                </div>\r\n                <div class='row'>\r\n                    <div class='col-md-3'>Description:</div>\r\n                    <div class='col-md-6'>{{product.description}}</div>\r\n                </div>\r\n                <div class='row'>\r\n                    <div class='col-md-3'>Availability:</div>\r\n                    <div class='col-md-6'>{{product.releaseDate}}</div>\r\n                </div>\r\n                <div class='row'>\r\n                    <div class='col-md-3'>Price:</div>\r\n                    <div class='col-md-6'>{{product.price|currency:'USD':true}}</div>\r\n                </div>\r\n                <div class='row'>\r\n                    <div class='col-md-3'>5 Star Rating:</div>\r\n                    <div class='col-md-6'>\r\n                        <pm-star [rating]='product.starRating'>\r\n                        </pm-star>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class='col-md-6'>\r\n                <img class='center-block img-responsive' \r\n                     [style.width.px]='200' \r\n                     [style.margin.px]='2' \r\n                     [src]='product.imageUrl'\r\n                     [title]='product.productName'>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class='panel-footer'>\r\n        <a class='btn btn-default' (click)='onBack()' style='width:80px'>\r\n            <i class='glyphicon glyphicon-chevron-left'></i> Back\r\n        </a>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -240,6 +240,7 @@ var ProductGuardService = (function () {
             this._router.navigate(['/products']);
             return false;
         }
+        ;
         return true;
     };
     return ProductGuardService;
@@ -262,7 +263,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "thead {\n    color: #337AB7;\n}", ""]);
+exports.push([module.i, "thead {\r\n    color: #337AB7;\r\n}", ""]);
 
 // exports
 
@@ -275,7 +276,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/products/product-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class='panel panel-primary'>\n    <div class='panel-heading'>\n        {{pageTitle}}\n    </div>\n    <div class='panel-body'>\n        <div class='row'>\n            <div class='col-md-2'>Filter by:</div>\n            <div class='col-md-4'>\n                <input type='text' [(ngModel)]='listFilter' />\n            </div>\n        </div>\n        <div class='row'>\n            <div class='col-md-6'>\n                <h3>Filtered by: {{listFilter}} </h3>\n            </div>\n        </div>\n        <div class='table-responsive'>\n            <table class='table'\n                    *ngIf='products && products.length'>\n                <thead>\n                    <tr>\n                        <th>\n                            <button class='btn btn-primary'\n                                (click)='toggleImage()'>\n                                {{showImage ? 'Hide' : 'Show'}} Image\n                            </button>\n                        </th>\n                        <th>Product</th>\n                        <th>Code</th>\n                        <th>Available</th>\n                        <th>Price</th>\n                        <th>5 Star Rating</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor='let product of filteredProducts'>\n                        <td>\n                            <img *ngIf='showImage'\n                                [src]='product.imageUrl'\n                                [title]='product.productName'\n                                [style.width.px]='imageWidth'\n                                [style.margin.px]='imageMargin'>\n                        </td>\n                        <td><a [routerLink]=\"['/products', product.productId]\">\n                                {{ product.productName }}\n                            </a>\n\t\t\t\t\t\t</td>\n                        <td>{{ product.productCode | lowercase | convertToSpaces: '-' }}</td>\n                        <td>{{ product.releaseDate }}</td>\n                        <td>{{ product.price | currency:'USD':true:'1.2-2'}}</td>\n                        <td>\n                            <pm-star [rating]='product.starRating'\n                                (ratingClicked)='onRatingClicked($event)'>\n\t\t\t\t\t\t\t</pm-star>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>\n<div *ngIf='errorMessage' class='alert alert-danger'>\n    Error: {{ errorMessage }}\n</div>"
+module.exports = "<div class='panel panel-primary'>\r\n    <div class='panel-heading'>\r\n        {{pageTitle}}\r\n    </div>\r\n    <div class='panel-body'>\r\n        <div class='row'>\r\n            <div class='col-md-2'>Filter by:</div>\r\n            <div class='col-md-4'>\r\n                <input type='text' [(ngModel)]='listFilter' />\r\n            </div>\r\n        </div>\r\n        <div class='row'>\r\n            <div class='col-md-6'>\r\n                <h3>Filtered by: {{listFilter}} </h3>\r\n            </div>\r\n        </div>\r\n        <div class='table-responsive'>\r\n            <table class='table'\r\n                    *ngIf='products && products.length'>\r\n                <thead>\r\n                    <tr>\r\n                        <th>\r\n                            <button class='btn btn-primary'\r\n                                (click)='toggleImage()'>\r\n                                {{showImage ? 'Hide' : 'Show'}} Image\r\n                            </button>\r\n                        </th>\r\n                        <th>Product</th>\r\n                        <th>Code</th>\r\n                        <th>Available</th>\r\n                        <th>Price</th>\r\n                        <th>5 Star Rating</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor='let product of filteredProducts'>\r\n                        <td>\r\n                            <img *ngIf='showImage'\r\n                                [src]='product.imageUrl'\r\n                                [title]='product.productName'\r\n                                [style.width.px]='imageWidth'\r\n                                [style.margin.px]='imageMargin'>\r\n                        </td>\r\n                        <td><a [routerLink]=\"['/products', product.productId]\">\r\n                                {{ product.productName }}\r\n                            </a>\r\n\t\t\t\t\t\t</td>\r\n                        <td>{{ product.productCode | lowercase | convertToSpaces: '-' }}</td>\r\n                        <td>{{ product.releaseDate }}</td>\r\n                        <td>{{ product.price | currency:'USD':true:'1.2-2'}}</td>\r\n                        <td>\r\n                            <pm-star [rating]='product.starRating'\r\n                                (ratingClicked)='onRatingClicked($event)'>\r\n\t\t\t\t\t\t\t</pm-star>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -416,7 +417,7 @@ ProductModule = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_throw__ = __webpack_require__("../../../../rxjs/add/observable/throw.js");
@@ -447,10 +448,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ProductService = (function () {
     function ProductService(_http) {
         this._http = _http;
-        this._productUrl = 'products.json';
+        //private _productUrl = 'api/products/products.json'; //DEV
+        this._productUrl = 'products.json'; //PROD
     }
     ProductService.prototype.getProducts = function () {
         return this._http.get(this._productUrl)
+            .map(function (response) { return response.json(); })
             .do(function (data) { return console.log('All: ' + JSON.stringify(data)); })
             .catch(this.handleError);
     };
@@ -458,27 +461,17 @@ var ProductService = (function () {
         return this.getProducts()
             .map(function (products) { return products.find(function (p) { return p.productId === id; }); });
     };
-    ProductService.prototype.handleError = function (err) {
+    ProductService.prototype.handleError = function (error) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
-        var errorMessage = '';
-        if (err.error instanceof Error) {
-            // A client-side or network error occurred. Handle it accordingly.
-            errorMessage = "An error occurred: " + err.error.message;
-        }
-        else {
-            // The backend returned an unsuccessful response code.
-            // The response body may contain clues as to what went wrong,
-            errorMessage = "Server returned code: " + err.status + ", error message is: " + err.message;
-        }
-        console.error(errorMessage);
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errorMessage);
+        console.error(error);
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(error.json().error || 'Server error');
     };
     return ProductService;
 }());
 ProductService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], ProductService);
 
 var _a;
@@ -508,7 +501,7 @@ var ConvertToSpacesPipe = (function () {
     return ConvertToSpacesPipe;
 }());
 ConvertToSpacesPipe = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Pipe */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Pipe */])({
         name: 'convertToSpaces'
     })
 ], ConvertToSpacesPipe);
@@ -544,14 +537,14 @@ var SharedModule = (function () {
 SharedModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["c" /* CommonModule */]
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */]
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__star_component__["a" /* StarComponent */]
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__star_component__["a" /* StarComponent */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["c" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* CommonModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */]
         ]
     })
@@ -569,7 +562,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".crop {\n    overflow: hidden;\n}\ndiv {\n    cursor: pointer;\n}", ""]);
+exports.push([module.i, ".crop {\r\n    overflow: hidden;\r\n}\r\ndiv {\r\n    cursor: pointer;\r\n}", ""]);
 
 // exports
 
@@ -582,7 +575,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/shared/star.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"crop\" \n    [style.width.px]=\"starWidth\"\n    [title]=\"rating\"\n    (click)=\"onClick()\">\n    <div style=\"width: 86px\">\n        <span class=\"glyphicon glyphicon-star\"></span>\n        <span class=\"glyphicon glyphicon-star\"></span>\n        <span class=\"glyphicon glyphicon-star\"></span>\n        <span class=\"glyphicon glyphicon-star\"></span>\n        <span class=\"glyphicon glyphicon-star\"></span>\n    </div>\n</div>"
+module.exports = "<div class=\"crop\" \r\n    [style.width.px]=\"starWidth\"\r\n    [title]=\"rating\"\r\n    (click)=\"onClick()\">\r\n    <div style=\"width: 86px\">\r\n        <span class=\"glyphicon glyphicon-star\"></span>\r\n        <span class=\"glyphicon glyphicon-star\"></span>\r\n        <span class=\"glyphicon glyphicon-star\"></span>\r\n        <span class=\"glyphicon glyphicon-star\"></span>\r\n        <span class=\"glyphicon glyphicon-star\"></span>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -604,7 +597,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var StarComponent = (function () {
     function StarComponent() {
-        this.ratingClicked = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* EventEmitter */]();
+        this.ratingClicked = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]();
     }
     StarComponent.prototype.ngOnChanges = function () {
         this.starWidth = this.rating * 86 / 5;
@@ -615,12 +608,12 @@ var StarComponent = (function () {
     return StarComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
     __metadata("design:type", Number)
 ], StarComponent.prototype, "rating", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Output */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["h" /* EventEmitter */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_4" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]) === "function" && _a || Object)
 ], StarComponent.prototype, "ratingClicked", void 0);
 StarComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
